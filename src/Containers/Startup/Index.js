@@ -66,8 +66,6 @@ export default function Startup({...props}) {
   const handleDeepLinkEvent = useCallback(
     url => {
       try {
-        console.log(url);
-
         const searchKeyword = url.split('://')[1].split('/')[1];
 
         if (state.users.length > 0) {
