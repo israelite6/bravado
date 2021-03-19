@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 8,
+      "elevation": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginTop": 15,
+      "paddingHorizontal": 8,
+      "paddingVertical": 7,
+      "shadowColor": "rgba(0,0,0,0.1)",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 1,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "600",
+        }
+      }
+    >
+      name
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 13,
+          "fontWeight": "600",
+          "paddingTop": 5,
+        }
+      }
+    >
+      email
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 13,
+          "fontWeight": "600",
+          "paddingTop": 5,
+        }
+      }
+    >
+      title
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 13,
+          "fontWeight": "600",
+          "paddingTop": 5,
+        }
+      }
+    >
+      address
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "#C4C4C4",
+          "borderRadius": 4,
+          "height": 68,
+          "resizeMode": "cover",
+          "width": 68,
+        },
+      ]
+    }
+  >
+    <FastImageView
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "avatar",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

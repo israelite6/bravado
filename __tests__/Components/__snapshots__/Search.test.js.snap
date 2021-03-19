@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 4,
+      "flexDirection": "row",
+      "paddingHorizontal": 12,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 10,
+        },
+        Object {
+          "color": "#B3B3B3",
+          "paddingRight": 9,
+        },
+        Object {
+          "fontFamily": "anticon",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "flexGrow": 1,
+        "fontSize": 14,
+        "paddingVertical": 0,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
