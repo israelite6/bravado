@@ -39,19 +39,13 @@ export default function Startup({...props}) {
       const result = (keyword.includes(state.searchKeyword.toLocaleLowerCase())
         ? [...state.data]
         : [...state.users]
-      )
-        .filter(
-          user =>
-            user.name.toLowerCase().includes(keyword) ||
-            user.title.toLowerCase().includes(keyword) ||
-            user.email.toLowerCase().includes(keyword) ||
-            user.address.toLowerCase().includes(keyword),
-        )
-        .sort(
-          (a, b) =>
-            a.name.toLowerCase().indexOf(keyword) -
-            b.name.toLowerCase().indexOf(keyword),
-        );
+      ).filter(
+        user =>
+          user.name.toLowerCase().includes(keyword) ||
+          user.title.toLowerCase().includes(keyword) ||
+          user.email.toLowerCase().includes(keyword) ||
+          user.address.toLowerCase().includes(keyword),
+      );
 
       handleSetState({data: result, searchKeyword});
     },
