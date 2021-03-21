@@ -21,6 +21,13 @@ export default function Startup({...props}) {
     [],
   );
 
+  const renderItem = useCallback(
+    ({item}) => {
+      return <CardItem {...item} searchKeyword={state.searchKeyword} />;
+    },
+    [state.searchKeyword],
+  );
+
   const handleSearch = useCallback(
     searchKeyword => {
       if (searchKeyword.length == 0) {
@@ -106,9 +113,7 @@ export default function Startup({...props}) {
         data={state.data}
         style={styles.listContainer}
         maxToRenderPerBatch={8}
-        renderItem={({item}) => (
-          <CardItem {...item} searchKeyword={state.searchKeyword} />
-        )}
+        renderItem={renderItem}
       />
     </View>
   );

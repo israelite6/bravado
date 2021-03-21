@@ -17,7 +17,7 @@ export default function Search({defaultValue, onChange, ...props}) {
       onChange(value);
     },
     // delay in ms
-    300,
+    500,
   );
   return (
     <View style={styles.root}>
