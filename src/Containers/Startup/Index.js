@@ -40,10 +40,12 @@ export default function Startup({...props}) {
         ? [...state.data]
         : [...state.users]
       )
-        .filter(user =>
-          (user.name + ' ' + user.email + ' ' + user.address + ' ' + user.title)
-            .toLowerCase()
-            .includes(keyword),
+        .filter(
+          user =>
+            user.name.toLowerCase().includes(keyword) ||
+            user.title.toLowerCase().includes(keyword) ||
+            user.email.toLowerCase().includes(keyword) ||
+            user.address.toLowerCase().includes(keyword),
         )
         .sort(
           (a, b) =>
@@ -112,7 +114,6 @@ export default function Startup({...props}) {
         keyExtractor={item => item.email}
         data={state.data}
         style={styles.listContainer}
-        maxToRenderPerBatch={8}
         renderItem={renderItem}
       />
     </View>
