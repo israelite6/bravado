@@ -2,10 +2,11 @@
 
 **Installation**
 
+- run `yarn global add patch-package`
 - run `git clone https://github.com/israelite6/bravado.git`
 - run `cd ./bravado`
 - run `yarn` or `npm install`
-- for IOS run  `cd ios && pod install`
+- for IOS run `cd ios && pod install`
 
 **Run the app**
 

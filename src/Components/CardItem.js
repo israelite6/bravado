@@ -15,46 +15,42 @@ import FastImage from 'react-native-fast-image';
  * @returns
  */
 
-export default function CardItem({
-  name,
-  email,
-  address,
-  title,
-  avatar,
-  searchKeyword,
-  ...props
-}) {
-  return (
-    <View style={styles.root}>
-      <View>
-        <HighlightText
-          style={styles.headerStyle}
-          highlightStyle={styles.highlightStyle}
-          searchWords={[searchKeyword || '']}
-          textToHighlight={name}
-        />
-        <HighlightText
-          style={styles.textStyle}
-          highlightStyle={{backgroundColor: 'yellow'}}
-          searchWords={[searchKeyword || '']}
-          textToHighlight={email}
-        />
-        <HighlightText
-          style={styles.textStyle}
-          highlightStyle={{backgroundColor: 'yellow'}}
-          searchWords={[searchKeyword || '']}
-          textToHighlight={title}
-        />
-        <HighlightText
-          style={styles.textStyle}
-          highlightStyle={{backgroundColor: 'yellow'}}
-          searchWords={[searchKeyword || '']}
-          textToHighlight={address}
-        />
+export default class CardItem extends React.PureComponent {
+  render() {
+    const {name, email, address, title, avatar, searchKeyword} = this.props;
+
+    return (
+      <View style={styles.root}>
+        <View>
+          <HighlightText
+            style={styles.headerStyle}
+            highlightStyle={styles.highlightStyle}
+            searchWords={[searchKeyword || '']}
+            textToHighlight={name}
+          />
+          <HighlightText
+            style={styles.textStyle}
+            highlightStyle={{backgroundColor: 'yellow'}}
+            searchWords={[searchKeyword || '']}
+            textToHighlight={email}
+          />
+          <HighlightText
+            style={styles.textStyle}
+            highlightStyle={{backgroundColor: 'yellow'}}
+            searchWords={[searchKeyword || '']}
+            textToHighlight={title}
+          />
+          <HighlightText
+            style={styles.textStyle}
+            highlightStyle={{backgroundColor: 'yellow'}}
+            searchWords={[searchKeyword || '']}
+            textToHighlight={address}
+          />
+        </View>
+        <FastImage source={{uri: avatar}} style={styles.avatar} />
       </View>
-      <FastImage source={{uri: avatar}} style={styles.avatar} />
-    </View>
-  );
+    );
+  }
 }
 
 CardItem.propTypes = {

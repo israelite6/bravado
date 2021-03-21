@@ -34,16 +34,16 @@ export default function Startup({...props}) {
         : [...state.users]
       )
         .filter(user =>
-          `${user.name} ${user.email} ${user.address} ${user.title}`
+          (user.name + ' ' + user.email + ' ' + user.address + ' ' + user.title)
             .toLowerCase()
             .includes(keyword),
         )
         .sort(
           (a, b) =>
-            `${a.name} ${a.email} ${a.address} ${a.title}`
+            (a.name + ' ' + a.title + ' ' + a.email + ' ' + a.address)
               .toLowerCase()
               .indexOf(keyword) -
-            `${b.name} ${b.email} ${b.address} ${b.title}`
+            (b.name + ' ' + b.title + ' ' + b.email + ' ' + b.address)
               .toLowerCase()
               .indexOf(keyword),
         );
@@ -105,6 +105,7 @@ export default function Startup({...props}) {
         keyExtractor={item => item.email}
         data={state.data}
         style={styles.listContainer}
+        maxToRenderPerBatch={8}
         renderItem={({item}) => (
           <CardItem {...item} searchKeyword={state.searchKeyword} />
         )}
@@ -121,6 +122,6 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 1,
-    marginVertical: 5,
+    marginTop: 5,
   },
 });
