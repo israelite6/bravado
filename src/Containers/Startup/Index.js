@@ -49,12 +49,8 @@ export default function Startup({...props}) {
         )
         .sort(
           (a, b) =>
-            (a.name + ' ' + a.title + ' ' + a.email + ' ' + a.address)
-              .toLowerCase()
-              .indexOf(keyword) -
-            (b.name + ' ' + b.title + ' ' + b.email + ' ' + b.address)
-              .toLowerCase()
-              .indexOf(keyword),
+            a.name.toLowerCase().indexOf(keyword) -
+            b.name.toLowerCase().indexOf(keyword),
         );
 
       handleSetState({data: result, searchKeyword});
